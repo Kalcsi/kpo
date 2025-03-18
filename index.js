@@ -28,6 +28,8 @@ kő.onclick=function(){
         ember+=1
     }
     console.log(`Ember:${ember}  Gép:${gép}`)
+    var image=document.getElementById("kőkép")
+    image.setAttribute('src', 'papír.png')
 }
 
 papír.onclick=function(){
@@ -81,4 +83,3 @@ olló.onclick=function(){
     }
     console.log(`Ember:${ember}  Gép:${gép}`)
 }
-

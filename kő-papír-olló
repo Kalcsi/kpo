@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content=" initial-scale=1.0"/>
+    <title>Kő, papír, olló</title>
+    <link rel="stylesheet" src="styles.css">
+    <style>
+    button{
+    padding: 60px;
+    margin:50px;
+    cursor:pointer;
+    border:none;
+    background-color:rgb(180, 173, 173);
+  }
+#kő{
+    background-image: url(kő.png);
+    background-size: contain;
+}
+#papír{
+  background-image: url(papír.png);
+  background-size: contain;
+}
+#olló{
+  background-image: url(olló.png);
+  background-size: contain;
+}
+body{
+  display:grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(180, 173, 173);
+}
+.rejt{
+  display:none
+}
+#állapot{
+  display:flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+img{
+  height:100px
+}
+#ember_gép_kiírás{
+  display:flex;
+  justify-content: space-evenly;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+.vonal{
+  width:100%;
+  height:3px;
+  background: #000000;
+}
+#pontok{
+  display:flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  font-weight: bold;
+}
+    </style>
+  </head>
+  <body>
+    <div id="gombok">
+      <button class="gomb" id="kő"></button>
+      <button class="gomb" id="papír"></button>
+      <button class="gomb" id="olló"></button>
+    </div>
+
+    <div class="rejt" id="állapot_nagy">
+      <div class="vonal"></div>
+      <div id="ember_gép_kiírás">
+        <p>Te</p>
+        <p>Számítógép</p>
+      </div>
+      <div class="vonal"></div>
+    </div>
+
+    <div id="állapot">
+      <div class="jelző" id="ember"><img class="rejt" id="kőkép" src="kő.png"></div>
+      <div><img class="rejt" id="gépkép" src="kő.png"></div>
+    </div>
+    <div class="rejt" id="pontok">
+      <p class="pont" id="ember_pont"></p>
+      <p class="pont" id="gép_pont"></p>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
